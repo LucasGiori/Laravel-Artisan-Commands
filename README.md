@@ -7,56 +7,92 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Comandos para executar projeto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+#### Iniciando e buildando o container
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+    docker-compose up -d --build
+```
 
-## Learning Laravel
+#### Acessa o container e executa o comando `composer install` para instalar as dependências do projeto.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+    docker container exec containerlaravel bash -c "composer install"
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Comandos Console disponíveis
 
-## Laravel Sponsors
+#### Acessar o container para executar os comandos
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+    docker container exec -it containerlaravel bash
+```
 
-### Premium Partners
+##### `:point_right:` numeros:crescentes
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+```bash
+    comando: `php artisan numeros:crescentes 10 20 11 25 89 14 56 10 --limit 4`
+    parâmetro: `numeros:crescentes`
+    parâmetro: números separados por espaço, exemplo: `1 2 3 4 5 6`
+    opção: limita a quantidade de itens da lista que será retornado para usuário, exemplo:  `--limit 4` 
+```
 
-## Contributing
+##### `:point_right:` numeros:descrescentes
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+    comando: `php artisan numeros:descrescente 10 20 11 25 89 14 56 10 --limit 4 --impares`
+    assinatura: `numeros:crescentes`
+    parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
+    opção: limita a quantidade de itens da lista que será retornado para usuário, exemplo:  `--limit 4` 
+    opção: retorna somente os números que forem ímpares:  `--impares` 
+```
 
-## Code of Conduct
+##### `:point_right:` numeros:soma
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+    comando: `php artisan numeros:soma 10 20 11 25 89 14 56 10`
+    assinatura: `numeros:soma`
+    parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
+```
 
-## Security Vulnerabilities
+##### `:point_right:` numeros:impar
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+    comando: `php artisan numeros:impar 10 20 11 25 89 14 56 10`
+    assinatura: `numeros:impar`
+    parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
+```
 
-## License
+##### `:point_right:` numeros:par
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+    comando: `php artisan numeros:par 10 20 11 25 89 14 56 10`
+    assinatura: `numeros:par`
+    parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
+```
+
+##### `:point_right:` numeros:maior
+
+```bash
+    comando: `php artisan numeros:maior 10 20 11 25 89 14 56 10`
+    assinatura: `numeros:maior`
+    parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
+```
+
+##### `:point_right:` numeros:media
+
+```bash
+    comando: `php artisan numeros:media 10 20 11 25 89 14 56 10`
+    assinatura: `numeros:media`
+    parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
+```
+
+##### `:point_right:` numeros:menor
+
+```bash
+    comando: `php artisan numeros:menor 10 20 11 25 89 14 56 10`
+    assinatura: `numeros:menor`
+    parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
+```
