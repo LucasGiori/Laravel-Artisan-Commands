@@ -30,7 +30,7 @@
     docker container exec -it containerlaravel bash
 ```
 
-##### `:point_right:` numeros:crescentes
+##### :point_right: numeros:crescentes
 
 ```bash
     comando: `php artisan numeros:crescentes 10 20 11 25 89 14 56 10 --limit 4`
@@ -39,7 +39,7 @@
     opção: limita a quantidade de itens da lista que será retornado para usuário, exemplo:  `--limit 4` 
 ```
 
-##### `:point_right:` numeros:descrescentes
+##### :point_right: numeros:descrescentes
 
 ```bash
     comando: `php artisan numeros:descrescente 10 20 11 25 89 14 56 10 --limit 4 --impares`
@@ -49,7 +49,7 @@
     opção: retorna somente os números que forem ímpares:  `--impares` 
 ```
 
-##### `:point_right:` numeros:soma
+##### :point_right: numeros:soma
 
 ```bash
     comando: `php artisan numeros:soma 10 20 11 25 89 14 56 10`
@@ -57,7 +57,7 @@
     parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
 ```
 
-##### `:point_right:` numeros:impar
+##### :point_right: numeros:impar
 
 ```bash
     comando: `php artisan numeros:impar 10 20 11 25 89 14 56 10`
@@ -65,7 +65,7 @@
     parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
 ```
 
-##### `:point_right:` numeros:par
+##### :point_right: numeros:par
 
 ```bash
     comando: `php artisan numeros:par 10 20 11 25 89 14 56 10`
@@ -73,7 +73,7 @@
     parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
 ```
 
-##### `:point_right:` numeros:maior
+##### :point_right: numeros:maior
 
 ```bash
     comando: `php artisan numeros:maior 10 20 11 25 89 14 56 10`
@@ -81,7 +81,7 @@
     parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
 ```
 
-##### `:point_right:` numeros:media
+##### :point_right: numeros:media
 
 ```bash
     comando: `php artisan numeros:media 10 20 11 25 89 14 56 10`
@@ -89,7 +89,7 @@
     parâmetro: números separados por espaço, exemplo: `10 20 11 25 89 14 56 10`
 ```
 
-##### `:point_right:` numeros:menor
+##### :point_right: numeros:menor
 
 ```bash
     comando: `php artisan numeros:menor 10 20 11 25 89 14 56 10`
