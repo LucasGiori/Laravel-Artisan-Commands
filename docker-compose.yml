@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  php:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    container_name: containerlaravel
+    ports:
+      - 8083:80
+    volumes:
+      - ./:/var/www/html
